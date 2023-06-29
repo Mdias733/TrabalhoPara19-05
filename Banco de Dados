@@ -1,7 +1,7 @@
 create database matheus;
 use matheus;
 
-
+select * from tb_cadUsuario;
 
 create table tb_cadUsuario(
 id_Usuario int unsigned not null primary key auto_increment,
@@ -9,8 +9,10 @@ nome_Usuario varchar(255),
 dtNasc_Usuario varchar(15),
 email_Usuario varchar(255)unique,
 senha_Usuario varchar(80),
+categoria varchar(3),
 dataCad_Usuario TIMESTAMP DEFAULT(CURRENT_TIMESTAMP())
 );
+
 
 create table tb_produtos(
 id_produto int unsigned not null primary key auto_increment,
@@ -24,6 +26,7 @@ uso_produto varchar(5),
 unidade_produto varchar(20),
 anotacao_produto varchar(255)
 );
+select * from tb_produtos;
 
 
 create table tb_chaves(
@@ -54,7 +57,7 @@ cadastrante_relatorioprod varchar (40),
 cod_relatorioprod varchar(30),
 quant_relatorioprod int
 );
-select * from tb_relatorioProduto;
+select * from tb_cad_Usuario;
 
 drop table tb_relatorioProduto;
 
